@@ -1,0 +1,45 @@
+# Created by BJ Rutledge 
+# LICENSE MIT
+# 5/28/22
+
+# This script allows users to easily switch aws profiles. 
+# Example: 
+
+# Switch to 'default' profile
+# Machine@user:~$ awsprofile 1
+
+# Switch to 'personal' profile
+# Machine@user:~$ awsprofile 2
+
+# Switch profiles with prompt \
+# Machine@user:~$ awsprofile 
+# MyProfile
+
+# Switch profile without prompt 
+# Machine@user:~$ awsprofile MyProfile 
+
+
+# Set aws profile 
+awsprofile(){       
+    if (( $# == 0 )); then
+            echo -n 'Enter profile name:'
+            read profile
+    # Change 'default' to whatever your default profile name is
+    elif (($1 == 0)); then
+        echo 'Setting default profile...'
+        profile='default'
+    # Change 'personal to whatever your personal profile is'
+    elif (($1 == 1)); then 
+        echo 'Setting personal profile...'
+        profile='personal'
+    else
+        profile=$1
+    fi
+        export AWS_PROFILE=$profile
+        echo 'AWS profile has been set to:' $AWS_PROFILE
+        return 0
+}
+
+alias aprofile=awsprofile 
+alias apr=aliasprofile
+alias ap=aliasprofile
