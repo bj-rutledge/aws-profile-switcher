@@ -20,7 +20,8 @@ Invoke-WebRequest -Uri https://awscli.amazonaws.com/AWSCLIV2.msi -OutFile $env:T
 ````
 or visit: 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html 
-Happy Coding!!!
+
+## Happy Coding!!!
 
 ## Load this script in your .bashrc script. 
 # BASH Examples. 
