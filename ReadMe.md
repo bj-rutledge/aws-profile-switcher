@@ -9,7 +9,7 @@ This scipt makes switching AWS CLI profiles simple and easy.
 Script for BASH and PowerShell
 
 ## Notes: 
-To install in powershell, place the script in ~\Documents\WindowsPowerShell directory. 
+To install in powershell, call script in your profile.ps1
 If your execution policy is strict, you will need to run: 
 ````ps1
 Unblock-File -Path ~\Documents\WindowsPowerShell\aws-profile-switcher.ps1
@@ -27,7 +27,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 # BASH Examples. 
 ### Examples:
 ```SH 
-# load aws profile switcher script 
+# load aws profile switcher script in .bashrc
 . ~/.aws-profile-switch 
 ```
 
@@ -52,6 +52,11 @@ awsprofile MyProfile
 
 
 ### PowerShell Examples: 
+````ps1
+# load profile switcher script in profile.ps1
+. ~\aws-profile-switcher.ps1
+
+````
 
 ````ps1
 
