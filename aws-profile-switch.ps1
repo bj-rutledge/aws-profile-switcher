@@ -59,7 +59,7 @@ function Switch-AWSProfile {
             # ... Add any other conditions you wish to switch on. 
             Default {}
         }
-        Set-Variable -Name AWS_PROFILE -Value $ProfileName -Scope Global 
+        $Env:AWS_PROFILE = $ProfileName
     }
     
     end {
